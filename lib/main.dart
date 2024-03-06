@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'dart:js_interop_unsafe';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:store_app/BranchesPage.dart';
 import 'package:store_app/Products.dart';
 import 'ShopButtonNavigator.dart';
 import 'package:http/http.dart';
@@ -58,7 +58,11 @@ class _StoreState extends State<Store> {
           backgroundColor: Colors.red,
           elevation: 0,
           actions: <Widget>[
-            IconButton(onPressed: () {} , icon: Icon(Icons.menu , color: Colors.white,))
+            IconButton(onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => BranchesPage()
+              ));
+            } , icon: Icon(Icons.map , color: Colors.white,))
           ],
         ),
       body:Padding(
@@ -100,8 +104,8 @@ Card generateItems(Products product , context){
           Container(
             width: 90,
             height: 90,
-            child: Image.network(
-              product.getImageUrl()
+            child: Image.asset(
+              product.image_url
             ),
             // decoration: BoxDecoration(
             //     image: DecorationImage(
