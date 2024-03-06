@@ -37,7 +37,7 @@ android {
         applicationId "com.example.store_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 20
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -51,6 +51,14 @@ android {
         }
     }
 }
+
+allprojects {
+    repositories {
+        google() // Add this line to include Google's Maven repository
+        jcenter()
+    }
+}
+
 
 flutter {
     source '../..'

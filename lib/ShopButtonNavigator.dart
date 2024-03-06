@@ -15,8 +15,8 @@ class ShopButtonNavigator extends StatelessWidget {
           children: <Widget> [
             Container(
               height: 50,
-              color: Colors.red,
-              width: MediaQuery.of(context).size.width/2,
+              //color: Colors.red,
+              width: MediaQuery.of(context).size.width/2-20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -27,8 +27,8 @@ class ShopButtonNavigator extends StatelessWidget {
             ),
             Container(
               height: 50,
-              color: Colors.red,
-              width: MediaQuery.of(context).size.width/2,
+              //color: Colors.red,
+              width: MediaQuery.of(context).size.width/2-20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
